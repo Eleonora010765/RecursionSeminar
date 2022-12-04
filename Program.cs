@@ -29,13 +29,11 @@ Console.Write("Задача 66. Найти сумму от n до m с помо�
 
 int RecursionSumAllNumToGap(int n1, int n2)
 {
+    if (n1 == n2) return(n1);
+    if (n1 > n2) return n2 + RecursionSumAllNumToGap(n1, n2 + 1);          
+    if (n1 < n2) return n1 + RecursionSumAllNumToGap(n1 + 1, n2);
+         else return(n1 + n2);
     
-    if (n1 > n2) return n2 + RecursionSumAllNumToGap(n1 - 1, n2);         
-    
-    if (n1 < n2) return n1 + RecursionSumAllNumToGap(n1, n2 - 1);
-    
-    if (n1 == n2) return(n1 + n2);
-    else return 0;
 }
     
 Console.Write("Задайте первое число > ");
@@ -55,13 +53,13 @@ int RecursionAccermanFunc(int n, int m)
     
     else if (n > 0 && m == 0) return RecursionAccermanFunc(n - 1, 1);
     
-        else if (n > 0 && m > 0) return RecursionAccermanFunc(n - 1, m - 1);
+        else if (n > 0 && m > 0) return RecursionAccermanFunc(n - 1, RecursionAccermanFunc(n, m - 1));
     else return 0;
 }
     
-Console.Write("Задайте первое число > ");
+Console.Write("Задайте число n > ");
 int numA1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Задайте второе число > ");
+Console.Write("Задайте число m > ");
 int numA2 = Convert.ToInt32(Console.ReadLine());
 int rezA = RecursionAccermanFunc(numA1, numA2);
 Console.WriteLine("Функция Аккермана для " + numA1 + " и " + numA2 + " равна " + rezA);

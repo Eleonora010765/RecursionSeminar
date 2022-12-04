@@ -22,6 +22,7 @@ Console.Write("Задача 64. Вывести числа от n до 1 с по�
 Console.Write("Задайте целое число > ");
 int numWrite = Convert.ToInt32(Console.ReadLine());
 RecursionWriteNumToOne(numWrite);
+Console.WriteLine("\n\n");
 
 //Задача 66. Найти сумму от n до m с помощью рекурсии
 Console.Write("Задача 66. Найти сумму от n до m с помощью рекурсии\n\n");
@@ -42,7 +43,7 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Задайте второе число > ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 int rez = RecursionSumAllNumToGap(num1, num2);
-Console.WriteLine("Сумма чисел от " + num1 + " до " + num2 + " равна " + rez);
+Console.WriteLine("Сумма чисел от " + num1 + " до " + num2 + " равна " + rez + "\n\n");
 
 
 //Задача 68. Вычисление функции Аккермана с помощью рекурсии
@@ -63,6 +64,6 @@ int numA1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Задайте второе число > ");
 int numA2 = Convert.ToInt32(Console.ReadLine());
 int rezA = RecursionAccermanFunc(numA1, numA2);
-Console.WriteLine("Сумма чисел от " + num1 + " до " + num2 + " равна " + );
+Console.WriteLine("Функция Аккермана для " + numA1 + " и " + numA2 + " равна " + rezA);
 
 
